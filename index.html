@@ -5,14 +5,35 @@
     <meta charset="UTF_8">
     <meta name="viewport" content="width= device-width,initial-scale=1.0">
     <title>Swala House </title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS.css">
+    <link rel="stylesheet" href="CSS1.css">
+    <link rel="stylesheet" href="CSS2.css">
+    <script>
+       function redirectToAboutPage() {
+            // Check if the required fields are filled
+            var username = document.getElementById("username").value;
+            var phoneNumber = document.getElementById("phone_number").value;
+            var email = document.getElementById("email").value;
+            var nationality = document.getElementById("nationality").value;
+            var gender = document.getElementById("gender").value;
+            var birthday = document.getElementById("birthday").value;
+
+            if (username && phoneNumber && email && nationality && gender && birthday) {
+                // All required fields are filled, redirect to the About page
+                window.location.href = "About.html";
+            } else {
+                // Display an alert message asking the user to fill out all required fields
+                alert("Please fill out all required fields before moving to the About page.");
+            }
+        }
+        </script>
 
 </head>
 
 <body>
     <nav>
         <ul>
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="About.html">About Swala House</a></li>
             <li><a href="Products.html"> Our Products</a></li>
             <li><a href="Prices.html">Prices</a></li>
@@ -22,15 +43,34 @@
         </ul>
 
     </nav>
-    <div class="container">
+    
 
-    <h1> Home Page of Swala House </h1>
-    <p> Swala House is an entreprise specialized in selling matches, battery , rice and jus and many more </p>
-    <p>At Swala House, we are committed to providing top-quality products and excellent customer service.</p>
-    <p>Our team works tirelessly to ensure that each customer's needs are met with efficiency and professionalism.</p> 
-    <p>Whether you're shopping in-store or online, you can trust Swala House to deliver a seamless shopping experience.</p> 
-    <p>Join our growing community of satisfied customers and experience the convenience of shopping with us today!</p>
-</div>
+    <h1> Welcome to  Swala House </h1>
+    <legend> We would like to take your  personal details before you continue !</legend>
+    <fieldset>
+        <table>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="phone_number">Phone Number:</label>
+            <input type="number" id="Phone_number" name="Phone number"><br><br>
+            <label for="email">Email adress</label>
+            <input type="text" id="email" name="email"><br><br>
+            <label for="nationality">Nationality</label>
+            <input type="text" id="nationality" name="nationality"><br><br>
+            <select name="" id="">
+                <option value="">--select Gender--</option>
+                <option value1="1">FEMALE</option>
+                <option value2="2">MALE</option>
+                <option value3="3">RATHER NOT TO SAY</option>
+            </select>
+            <input type="date" id="birthday" name="birthday"><br><br>
+
+            <input type="button" value="save details" onclick="redirectToAboutPage()">
+              </table>
+
+    </fieldset>
+    
+
 </body>
 </body>
 </html>
